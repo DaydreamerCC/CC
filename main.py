@@ -63,7 +63,7 @@ data = bt.feeds.PandasData(dataname=stock_hfq_df, fromdate=start_date, todate=en
 cerebro.adddata(data)  # 将数据传入回测系统
 cerebro.addstrategy(MyStrategy)  # 将交易策略加载到回测系统中
 start_cash = 231199.48
-cerebro.broker.setcash(start_cash)  # 设置初始资本为 100000
+cerebro.broker.setcash(start_cash)  # 设置初始资本
 cerebro.broker.setcommission(commission=0.002)  # 设置交易手续费为 0.2%
 cerebro.run()  # 运行回测系统
 
